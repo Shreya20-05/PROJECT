@@ -27,12 +27,20 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <h2>list of movies</h2>
-    <ul> 1.elio </ul>
-    <img src="https://wallpaperaccess.com/full/769774.jpg">
-    <ul> 1.elio </ul>
-    <ul> 1.elio </ul>
+    <body>
+  <h1>List of Movies</h1>
+  <ul id="movieList"></ul>
+
+  <script>
+    const movies = ["Interstellar", "Inception", "Avengers", "The Dark Knight", "RRR"];
+    const ul = document.getElementById("movieList");
+
+    movies.forEach((movie, index) => {
+      const li = document.createElement("li");
+      li.textContent = `${index + 1}. ${movie}`;
+      ul.appendChild(li);
+    });
+  </script>
+</body>
   </body>
 </html>
